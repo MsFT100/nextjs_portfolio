@@ -1,5 +1,3 @@
-import { FaHome } from "react-icons/fa";
-
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { GlobeDemo } from "./grid_globe";
@@ -75,28 +76,33 @@ export const BentoGridItem = ({
         }}
 
     >
-      {/* Main image */}
       {img && (
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={img}
             alt="main-img"
+            fill
             className={cn(
               "w-full h-full object-cover object-center opacity-60",
               imgClassName
             )}
+            sizes="100vw"
+            priority
           />
-        </div>
-      )}
-
       {/* Optional overlay/spare image */}
       {spareImg && (
         <div className="absolute bottom-0 right-0 z-10 w-full">
-          <img
+          <Image
             src={spareImg}
             alt="spare-img"
+            width={800}
+            height={200}
             className="w-full h-auto object-cover object-center opacity-70"
+            sizes="100vw"
+            priority={false}
           />
+        </div>
+      )}
         </div>
       )}
       {id === 6 && (

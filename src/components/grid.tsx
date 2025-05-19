@@ -1,4 +1,3 @@
-import { section } from "framer-motion/client";
 import { BentoGrid, BentoGridItem } from "./ui/bento_grid";
 
 import { gridItems } from "@/data";
