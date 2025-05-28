@@ -114,11 +114,11 @@ export const techStack = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    title: "Sevaria",
+    des: "Explore Nairobi Fashion",
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    link: "/sevaria.co.ke",
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ export const testimonials = [
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "Founder of Sevaria",
   },
   {
     quote:

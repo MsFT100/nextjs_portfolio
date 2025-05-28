@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -9,8 +8,13 @@ import { techStack } from "@/data";
 import { AnimatedSlide } from "./animated_slide";
 import { MagicButton } from "./border_magic";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "lottie-react";
 import animationData from "@/data/confetti.json";
+
+import dynamic from 'next/dynamic'
+
+// Dynamically import the Lottie component
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false })
+
 
 export const BentoGrid = ({
   className,
@@ -123,7 +127,7 @@ export const BentoGridItem = ({
         </div>
 
         {/* Button in front */}
-<div className="absolute lg:-bottom-50 w-full flex justify-end md:left-4 pr-4 md:pr-0 z-10">
+{/* <div className="absolute lg:-bottom-50 w-full flex justify-end md:left-4 pr-4 md:pr-0 z-10">
   <MagicButton
     title={copied ? 'Email copied' : 'Copy my email'}
     icon={<IoCopyOutline />}
@@ -131,7 +135,7 @@ export const BentoGridItem = ({
     otherClasses="!bg-[#161a31]"
     handleClick={handleCopy}
   />
-</div>
+</div> */}
 
       </div>
     </div>

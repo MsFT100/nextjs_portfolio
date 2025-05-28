@@ -14,7 +14,6 @@ const RecentProjects = () => {
             A small selection of{" "}
             <span className="text-purple-500">recent projects</span>
         </h1>
-
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
@@ -22,8 +21,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="/sevaria.co.ke"
+              href="https://sevaria.co.ke"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
