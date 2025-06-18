@@ -6,8 +6,6 @@ import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { GlobeDemo } from "./grid_globe";
 import { techStack } from "@/data";
 import { AnimatedSlide } from "./animated_slide";
-import { MagicButton } from "./border_magic";
-import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/data/confetti.json";
 
 import dynamic from 'next/dynamic'
@@ -62,11 +60,8 @@ export const BentoGridItem = ({
   hasGradient?: boolean;
 
 }) => {
-    const [copied, setCopied] = useState(false);
-    const handleCopy = () => {
-        navigator.clipboard.writeText('lennoxmathew@gmail.com');
-        setCopied(true)
-    }
+    const [copied, ] = useState(false);
+    
   return (
     <div
       className={cn(
