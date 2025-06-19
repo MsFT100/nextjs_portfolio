@@ -21,7 +21,7 @@ export default function Home() {
             {name: "Contact", link: "#", icon: <FaEnvelope />}, // FaEnvelope is perfect for Contact
           ]}
         />
-        <Hero></Hero>
+        <Hero />
         <Grid />
         <RecentProjects/>
         <Clients/>

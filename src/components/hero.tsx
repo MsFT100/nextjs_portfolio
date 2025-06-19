@@ -34,7 +34,7 @@ export const Hero = () => {
                     Hi, I&apos; Lennox, a passionate software engineer with a focus on web development, Apps, AI and automation. I love creating beautiful and functional web applications that provide great user experiences. My goal is to build innovative solutions that make a difference in people&apos;s lives.
                     <br />
                 </p>
-                <a href="#" title="Show me more about my portfolio">
+                <a href="/projects" title="Show me more about my portfolio">
                     <MagicButton
                     title="Show me more"
                     icon={<FaLocationArrow/>}
