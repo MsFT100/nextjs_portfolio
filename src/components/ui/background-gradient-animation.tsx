@@ -1,6 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+
+const subscribeNoop = () => () => {};
+const detectSafari = () =>
+  /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(108, 0, 162)",
@@ -81,10 +85,8 @@ export const BackgroundGradientAnimation = ({
     }
   };
 
-  const [isSafari, setIsSafari] = useState(false);
-  useEffect(() => {
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-  }, []);
+  // false on the server and during hydration, then the real value on the client
+  const isSafari = useSyncExternalStore(subscribeNoop, detectSafari, () => false);
 
   return (
     <div
