@@ -26,12 +26,12 @@ export const Hero = () => {
 
                 <TextGenerateEffect
                     className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mt-2"
-                    words="Building best user experiences"
+                    words="Web & mobile products, from API to app"
                     filter={false}>
                 </TextGenerateEffect>
 
                 <p className="text-center text-sm md:tracking-wider lg:text-lg text-gray-300 my-4">
-                    Hi, I&apos; Lennox, a passionate software engineer with a focus on web development, Apps, AI and automation. I love creating beautiful and functional web applications that provide great user experiences. My goal is to build innovative solutions that make a difference in people&apos;s lives.
+                    Hi, I&apos;m Lennox, a full-stack engineer based in Nairobi. I build web and mobile products end to end: Next.js and Flutter front ends, NestJS and Django backends, and the payment integrations Kenyan businesses need, including M-Pesa, Pesapal, Paystack and Flutterwave. Recent work includes an EV battery-swapping platform and a referral network for Rotarians.
                     <br />
                 </p>
                 <a href="/projects" title="Show me more about my portfolio">
