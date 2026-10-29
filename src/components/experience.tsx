@@ -15,8 +15,9 @@ const Experience = () => {
         {workExperience.map((card) => (
           <Button
             key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
+            // Deterministic per-card duration (random values during render
+            // cause hydration mismatches and fail the React purity lint rule)
+            duration={10000 + card.id * 2500}
             borderRadius="1.75rem"
             style={{
               //   add these two

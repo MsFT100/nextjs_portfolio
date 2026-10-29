@@ -20,8 +20,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/sevaria.co.ke"
-              href="https://sevaria.co.ke"
+              title={item.link.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              href={item.link}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
@@ -50,22 +50,20 @@ const RecentProjects = () => {
                 {item.des}
               </p>
               <div className="flex items-center justify-between mt-7 mb-3 w-full">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                <div className="flex flex-wrap items-center gap-1.5 max-w-[62%]">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="border border-white/[.2] rounded-full bg-black px-2.5 py-1 text-[10px] lg:text-xs whitespace-nowrap"
+                      style={{ color: "#BEC1DD" }}
                     >
-                      <Image src={icon} alt="icon5" width={32} height={32} className="p-2" />
-                    </div>
+                      {tag}
+                    </span>
                   ))}
                 </div>
                 <div className="flex justify-center items-center">
                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
+                    {item.linkLabel}
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
